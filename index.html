@@ -1,47 +1,44 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Bonsey Jaden Logo</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Bonsey Jaden Logo">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
-    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-  </head>
-  <body>
-    <!-- <model-viewer> HTML element -->
-		<model-viewer src="https://modelviewer.dev/assets/ShopifyModels/Chair.glb" poster="https://modelviewer.dev/assets/ShopifyModels/Chair.webp" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
-  
-			<button slot="ar-button" id="ar-button">
-			  View in your space
-			</button>
-		  
-			<div id="ar-prompt">
-			  <img src="https://modelviewer.dev/assets/hand.png">
+<head>
+	<title>Bonsey Jaden Logo</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Bonsey Jaden Logo">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" href="styles.css" rel="stylesheet"/>
+	<!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+	<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+</head>
+<body>
+	<!-- <model-viewer> HTML element -->
+	<model-viewer src="models//bj_logo_4.glb" poster="models//bj_logo_4.webp" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
+			
+		<button slot="ar-button" id="ar-button">
+			View in your space
+		</button>
+			
+		<div id="ar-prompt">
+			<img src="ar_hand_prompt.png">
+		</div>
+			
+		<button id="ar-failure">
+			AR is not tracking!
+		</button>
+			
+		<div class="slider">
+			<div class="slides">
+				<button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('models//Chair.webp');"></button>
+				<button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('models//Mixer.webp');"></button>
+				<button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('models//GeoPlanter.webp');"></button>
+				<button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('models//ToyTrain.webp');"></button>
+				<button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('models//Canoe.webp');"></button>
+				<button class="slide" onclick="switchSrc(this, 'bj_logo_4')" style="background-image: url('models//bj_logo_4.webp');"></button>
 			</div>
-		  
-			<button id="ar-failure">
-			  AR is not tracking!
-			</button>
-		  
-			<div class="slider">
-			  <div class="slides">
-				<button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Chair.webp');">
-		  
-				</button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Mixer.webp');">
-		  
-				</button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/GeoPlanter.webp');">
-				
-				</button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/ToyTrain.webp');">
-				
-				</button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('https://modelviewer.dev/assets/ShopifyModels/Canoe.webp');">    
-			  </button></div>
-			</div>
-		</model-viewer>
-		  
-    <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  </body>
+		</div>
+	</model-viewer>
+</body>
+	
+<script src="script.js"></script>
+<!-- Loads <model-viewer> for browsers: -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </html>
